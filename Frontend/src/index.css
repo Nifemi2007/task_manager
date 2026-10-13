@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --font-inter: "Inter", sans-serif;
+  --color-bluish: #f8fafc;
+}
+
+@layer base {
+  body {
+    @apply font-inter;
+  }
+}
+
+@layer components {
+  tr {
+    @apply px-4 py-10 text-left;
+  }
+
+  label {
+    @apply font-black;
+  }
+
+  label + input {
+    @apply p-2 w-full border border-gray-400 rounded-md mt-2 outline-none;
+  }
+}
+
+table {
+  /* border: none; */
+  /* border: 1px solid rgb(197, 195, 195);
+  border-radius: 20px; */
+  border-collapse: collapse;
+  height: 20px;
+}
+
+tr {
+  border-bottom: 1px solid rgb(204, 202, 202);
+}
+
+th,
+td {
+  padding: 10px 0px;
+  padding-left: 30px;
+}
+
+.rdp-day_button {
+  border: none !important;
+  outline: none;
+  box-shadow: none;
+}
+
+.rdp-day_button:focus,
+.rdp-day_button:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+.rdp-selected .rdp-day_button {
+  border: none !important;
+  box-shadow: none !important;
+}
