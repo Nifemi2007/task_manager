@@ -19,23 +19,21 @@ function SideBar({ control_sidebar, open }) {
   return (
     <aside
       className={`w-[50%] md:w-[40%] lg:w-[20%] fixed left-0 top-0 h-full bg-white p-8 transform transition-transform duration-300 ease-in-out ${
-        open ? "translate-x-0" : " hidden -translate-x-full"
+        open ? "translate-x-0" : " -translate-x-full"
       }`}
     >
+      <PanelLeftClose
+        onClick={control_sidebar}
+        className="h-5 w-5 ml-auto cursor-pointer"
+      />
       <div className="flex gap-2 ">
         {/* Logo */}
         <CheckSquare className="text-white bg-violet-700 rounded-md p-2 h-10 w-10" />
-        {/* <img src={logo} alt="logo" className="h-8 w-8" /> */}
 
         <span>
           <h1 className="text-[25px] font-bold">TaskFlow</h1>
           <p className="text-[13px] text-gray-500">Get things done</p>
         </span>
-
-        <PanelLeftClose
-          onClick={control_sidebar}
-          className="h-5 w-5 ml-auto cursor-pointer"
-        />
       </div>
 
       {/* group of task */}
