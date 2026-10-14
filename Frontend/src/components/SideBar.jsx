@@ -13,6 +13,7 @@ import {
   Settings,
 } from "lucide-react";
 // import logo from "../assets/check.png";
+import { Link } from "react-router-dom";
 import SideBarActions from "./SideBarActions";
 
 function SideBar({ control_sidebar, open }) {
@@ -38,12 +39,24 @@ function SideBar({ control_sidebar, open }) {
 
       {/* group of task */}
       <div className="mt-15 flex flex-col gap-5">
-        <SideBarActions icon={<Home />} text={"Home"} />
-        <SideBarActions icon={<LineChart />} text={"My Tasks"} />
-        <SideBarActions icon={<Calendar />} text={"Today"} />
-        <SideBarActions icon={<Clock />} text={"Upcoming"} />
-        <SideBarActions icon={<CheckIcon />} text={"Completed"} />
-        <SideBarActions icon={<Settings />} text={"Settings"} />
+        <Link to={"/"}>
+          <SideBarActions icon={<Home />} text={"Home"} />
+        </Link>
+        <Link to={"/mytasks"}>
+          <SideBarActions icon={<LineChart />} text={"My Tasks"} />
+        </Link>
+        <Link to={"/today"}>
+          <SideBarActions icon={<Calendar />} text={"Today"} />
+        </Link>
+        <Link to={"/upcoming"}>
+          <SideBarActions icon={<Clock />} text={"Upcoming"} />
+        </Link>
+        <Link to={"/completed"}>
+          <SideBarActions icon={<CheckIcon />} text={"Completed"} />
+        </Link>
+        <Link to={"/settings"}>
+          <SideBarActions icon={<Settings />} text={"Settings"} />
+        </Link>
       </div>
 
       <div className="bg-violet-500 w-[80%] h-[25%] rounded-md fixed bottom-25 "></div>
